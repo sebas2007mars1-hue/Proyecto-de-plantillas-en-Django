@@ -1,0 +1,62 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 40px 20px;
+}
+
+/* Tarjeta principal */
+.tarjeta {
+    background-color: white;
+    max-width: 750px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+/* Títulos */
+h1 {
+    color: #2457a6;
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+    border-bottom: 2px solid #2457a6;
+    padding-bottom: 8px;
+}
+
+/* Párrafos */
+p {
+    color: #444;
+    font-size: 16px;
+}
+
+/* Lista de cursos */
+li {
+    padding: 5px;
+}
+
+/* Tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th {
+    background-color: #2457a6;
+    color: white;
+    padding: 12px;
+}
+
+td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f6fc;
+}

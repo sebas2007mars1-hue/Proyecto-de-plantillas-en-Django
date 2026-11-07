@@ -1,0 +1,69 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantillas Django DTL</title>
+
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+</head>
+<body>
+
+    <div class="tarjeta">
+
+        <h1>Bienvenido a mi proyecto Django</h1>
+
+        <h2>Información del aprendiz</h2>
+
+        <p>Nombre: {{ aprendiz }}</p>
+
+        <p>Ficha: {{ ficha }}</p>
+
+        <p>Programa: {{ programa }}</p>
+
+        <p>Framework: {{ framework }}</p>
+
+        {% if activo %}
+            <p>Estado: Aprendiz activo</p>
+        {% else %}
+            <p>Estado: Aprendiz inactivo</p>
+        {% endif %}
+
+        <h2>Mis cursos</h2>
+
+        <ul>
+            {% for curso in cursos %}
+                <li>{{ curso }}</li>
+            {% endfor %}
+        </ul>
+
+        <p>Total de cursos: {{ cursos|length }}</p>
+
+        {% if cursos %}
+            <p>Tienes cursos registrados.</p>
+        {% else %}
+            <p>No tienes cursos registrados.</p>
+        {% endif %}
+
+        <h2>Tabla de cursos</h2>
+
+        <table>
+            <tr>
+                <th>Número</th>
+                <th>Nombre del curso</th>
+            </tr>
+
+            {% for curso in cursos %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ curso }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+    </div>
+
+</body>
+</html>
